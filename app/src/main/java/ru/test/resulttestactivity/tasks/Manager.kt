@@ -10,8 +10,10 @@ open class Manager {
         return e
     }
 
-    fun notifyPendingResponses() = exchangers.forEach {
-        it.onNotify()
+    fun notifyPending() {
+        exchangers.forEach {
+            it.onNotify()
+        }
     }
 
     open class IO(val id: String) {

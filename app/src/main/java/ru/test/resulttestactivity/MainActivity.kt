@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportFragmentManager.addOnBackStackChangedListener {
-            userData.notifyPendingResponses()
+            userData.notifyPending()
         }
         showFragment(OneFragment())
     }
